@@ -17,4 +17,14 @@ public class RoundData
         }
         this.avgTime = this.time / times.Count;
     }
+
+    public override string ToString()
+    {
+        string formatedString = $"\nTotal Time: {this.time} \t Average Time Per Question: {this.avgTime} \t Number of Questions: {questions.Count}\n";
+        for (int i = 0; i < questions.Count; i++)
+        {
+            formatedString += string.Format($"{questions[i]} {times[i].ToString().PadLeft(60)}\n");
+        }
+        return formatedString;
+    }
 }
