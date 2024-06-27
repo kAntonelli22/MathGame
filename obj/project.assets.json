@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\csharpprojects\\MathGame\\MathGame.csproj",
+      "projectUniqueName": "F:\\csharpprojects\\CodeReviews.Console.MathGame\\kAntonelli22.MathGame\\MathGame.csproj",
       "projectName": "MathGame",
-      "projectPath": "F:\\csharpprojects\\MathGame\\MathGame.csproj",
+      "projectPath": "F:\\csharpprojects\\CodeReviews.Console.MathGame\\kAntonelli22.MathGame\\MathGame.csproj",
       "packagesPath": "C:\\Users\\PlayroomRyzen\\.nuget\\packages\\",
-      "outputPath": "F:\\csharpprojects\\MathGame\\obj\\",
+      "outputPath": "F:\\csharpprojects\\CodeReviews.Console.MathGame\\kAntonelli22.MathGame\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PlayroomRyzen\\AppData\\Roaming\\NuGet\\NuGet.Config",

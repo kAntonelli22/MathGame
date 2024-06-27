@@ -1,7 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
 string? response;
 Random dice = new();
@@ -11,7 +8,7 @@ List<RoundData> history = new List<RoundData>();
 
 void mainMenu()
 {
-    Console.WriteLine("Welcome to Math Game!\nWhat operation would you like?");
+    Console.WriteLine("What operation would you like?");
 
     Console.WriteLine("1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Random\n6. Game History");
     response = Console.ReadLine();
@@ -34,14 +31,13 @@ void mainMenu()
         Environment.Exit(0);
     else
     {
-        Console.WriteLine("Not a valid response. Please enter one of the four options or exit");
         mainMenu();
     }
 } // end of main menu method
 
 void gameRound(string response)
 {
-    Console.WriteLine("Answer all five questions as quickly and correctly as possible");
+    Console.WriteLine("Answer five questions correctly as quickly as you can");
     countdown();
     int correctlyAnswered = 0;
     List<string> questions = new List<string>();
@@ -81,6 +77,7 @@ Tuple<int, string> createEquation(string response)
 {
     int first = dice.Next(0, 100);
     int second = dice.Next(0, 100);
+    // roll new numbers if either is zero or has a remainder
     if (response == "4")
     {
         while (first == 0 || second == 0 || first % second != 0)
@@ -106,17 +103,24 @@ Tuple<int, string> createEquation(string response)
         default:
             return new Tuple<int, string>(first / second, $"{first} / {second} = ");
     }
-}
+} // end of createEquation method
 
+// countdown function that runs before game rounds
 void countdown()
 {
-    Console.Write("3"); Thread.Sleep(250); Console.Write("."); Thread.Sleep(250);
-    Console.Write("."); Thread.Sleep(250); Console.Write(". "); Thread.Sleep(250);
-    Console.Write("2"); Thread.Sleep(250); Console.Write("."); Thread.Sleep(250);
-    Console.Write("."); Thread.Sleep(250); Console.Write(". "); Thread.Sleep(250);
-    Console.Write("1"); Thread.Sleep(250); Console.Write("."); Thread.Sleep(250);
-    Console.Write("."); Thread.Sleep(250); Console.Write(".\n"); Thread.Sleep(250);
-}
+    for (int i = 3; i > 0; i--)
+    {
+        Console.Write(i);
+        Thread.Sleep(250);
+        for (int j = 0; j < 3; j++)
+        {
+            Console.Write(".");
+            Thread.Sleep(250);
+        }
+        Console.Write(" ");
+    }
+    Console.WriteLine("\n");
+} // end of countdown method
 
 // starts game
 mainMenu();

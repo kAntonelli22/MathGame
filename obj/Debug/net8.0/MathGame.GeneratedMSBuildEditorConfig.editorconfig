@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MathGame
-build_property.ProjectDir = F:\csharpprojects\MathGame\
+build_property.ProjectDir = F:\csharpprojects\CodeReviews.Console.MathGame\kAntonelli22.MathGame\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
